@@ -28,7 +28,8 @@ public class CursomcApplication implements CommandLineRunner {
 	@Autowired
 	private ClienteRepository clienteRepository;
 
-	@Autowired EnderecoRepository enderecoRepository;
+	@Autowired
+	EnderecoRepository enderecoRepository;
 
 	public static void main(String[] args){
 		SpringApplication.run(CursomcApplication.class, args);

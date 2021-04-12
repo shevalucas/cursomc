@@ -1,5 +1,6 @@
 package com.shevalucas.cursomc.domain;
 
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Objects;
