@@ -1,6 +1,7 @@
 package com.shevalucas.cursomc.services;
 
 import com.shevalucas.cursomc.domain.Categoria;
+import com.shevalucas.cursomc.dto.CategoriaDTO;
 import com.shevalucas.cursomc.repositories.CategoriaRepository;
 import com.shevalucas.cursomc.services.exceptions.DataIntegrityException;
 import com.shevalucas.cursomc.services.exceptions.ObjectNotFoundException;
@@ -56,6 +57,10 @@ public class CategoriaService {
         PageRequest pageRequest = PageRequest.of(
                 page, linesPerPage, Sort.Direction.valueOf(direction), orderBy);
         return repository.findAll(pageRequest);
+    }
+
+    public Categoria fromDTO(CategoriaDTO objDto){
+        return new Categoria(objDto.getId(), objDto.getNome());
     }
 
 }
