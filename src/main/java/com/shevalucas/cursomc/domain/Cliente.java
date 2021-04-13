@@ -1,5 +1,6 @@
 package com.shevalucas.cursomc.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.shevalucas.cursomc.domain.enums.TipoCliente;
 
 import javax.persistence.*;
@@ -26,6 +27,7 @@ public class Cliente implements Serializable {
     private Set<String> telefones = new HashSet<>();
 
 
+    @JsonIgnore
     @OneToMany(mappedBy = "cliente")
     private List<Pedido> pedidos = new ArrayList<>();
 
